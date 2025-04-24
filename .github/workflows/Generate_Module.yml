@@ -1,0 +1,24 @@
+name: Generate TTS Module
+
+on: workflow_dispatch
+
+jobs:
+  make_module:
+
+    runs-on: ubuntu-22.04
+    name: Generate a module from the current krcg json file
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run script
+        run: |
+          python3 create_tts_mod.py
+      - name: upload json file
+        uses: actions/upload-artifact@v4
+        with:
+          name: VtES_TTS_Module
+          path: VtES_TTS_Module.json
+
