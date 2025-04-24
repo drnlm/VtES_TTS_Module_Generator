@@ -19,6 +19,5 @@ and so on. We only use the 'name', 'id', 'types' and 'url' fields from the KRCG 
 fields need to be present on each card.
 
 
-
-
+This is licensed under the ISC license - see the LICENSE file for details.
 
