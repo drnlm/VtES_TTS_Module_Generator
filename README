@@ -9,7 +9,7 @@ Usage
 
 `python3 create_tts_mod.py [vtes.json]`
 
-This creates a file calles VtES_TTS.json, which can be placed in the `Mods/Workshop` folder.
+This creates a file calles VtES_TTS_Module.json, which can be placed in the TTS `Mods/Workshop` folder.
 
 The module uses the card data and cards images provided by https://static.krcg.org/ .
 
