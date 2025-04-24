@@ -1,0 +1,24 @@
+Tabletop Simulator VtES module generator
+----------------------------------------
+
+
+This generates a TTS module for building VtES decks, building on the base provided by the
+maintainers of the VtES full cards module - https://steamcommunity.com/sharedfiles/filedetails/?id=1955001917
+
+Usage
+
+`python3 create_tts_mod.py [vtes.json]`
+
+This creates a file calles VtES_TTS.json, which can be placed in the `Mods/Workshop` folder.
+
+The module uses the card data and cards images provided by https://static.krcg.org/ .
+
+By default, the program will download the vtes.json file from https://static.krcg.org/data/vtes.json ,
+but it is possible to provide your own json file as an input parameter for including custom cards
+and so on. We only use the 'name', 'id', 'types' and 'url' fields from the KRCG json file, but all these
+fields need to be present on each card.
+
+
+
+
+
