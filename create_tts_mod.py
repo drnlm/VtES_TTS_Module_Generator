@@ -173,11 +173,12 @@ def load_local_file(filename: str) -> dict:
 def create_tts_json_card(krcg_json_card: dict) -> dict:
     tts_card = copy.deepcopy(CARD_TEMPLATE)
     tts_card['Nickname'] = krcg_json_card['name']
+    tts_card['CardID'] = f"{krcg_json_card['id']}00"
     dCustomDeck = {
          "FaceURL": krcg_json_card['url'],
          "NumWidth": 1,
          "NumHeight": 1,
-         "BackIsHidden": False,
+         "BackIsHidden": True,
          "UniqueBack": False,
          "Type": 1,
     }
@@ -216,11 +217,11 @@ def create_tts_bag(krcg_json_cards: list[dict], bag_name: str,
 def write_tts_module(tts_bags: list[dict]) -> None:
     cur_time = datetime.datetime.now()
     data = {
-        'SaveNmae': "Vampire: The Eternal struggle cards (full) Vtes - " + cur_time.strftime("%Y-%m-%d"),
+        'SaveName': "Updated Vampire: The Eternal struggle cards (full) Vtes - " + cur_time.strftime("%Y-%m-%d"),
         "EpochTime": int(cur_time.timestamp()),
         "Date": cur_time.strftime("%d/%m/%Y %r"),
         "VersionNumber": "v14",
-        "GameMode": "VTES2024",
+        "GameMode": "VTES2025",
         "GameType": "",
         "GameComplexity": "",
         "Tags": [],
